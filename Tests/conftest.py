@@ -5,7 +5,7 @@ from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 
-@pytest.fixture(params=["chrome", "firefox"], scope='class')
+@pytest.fixture(params=["firefox", "chrome"], scope='class')
 def init_driver(request):
     options = Options()
     options.add_argument("--start-maximized")

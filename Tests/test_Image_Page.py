@@ -81,3 +81,4 @@ class TestImage(BaseTest):
         self.ImagePage.image_closing_tabs()
         assert hash(res_1) == hash(res_2), 'Вернулись не на предыдущую картинку'
 
+

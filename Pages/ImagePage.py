@@ -4,7 +4,7 @@ from Pages.BasePage import BasePage
 
 
 class ImagePage(BasePage):
-    """By locators"""
+    """ By locators """
     LOCATOR_IMAGE_HREF = (By.XPATH, "//a[@data-id='images']")
     LOCATOR_TEXT_FIRST_CATEGORY = (By.CLASS_NAME, "PopularRequestList-SearchText")
     LOCATOR_1 = (By.XPATH, "/html/body/div[3]/div[2]/div[1]/div/div/div[1]/a/div[1]")

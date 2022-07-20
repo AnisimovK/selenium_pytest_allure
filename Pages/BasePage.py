@@ -3,10 +3,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 from selenium.common import exceptions
 from Config.config import TestData
-from loguru import logger
-
-logger.add("debug.json", format="{time} {level} {message}",
-           level="DEBUG", rotation="1 week", compression="zip", serialize=True)
 
 """This class is the parent of all pages"""
 """it contains all the main methods and utilities for all the pages"""
@@ -26,7 +22,6 @@ class BasePage:
             return False
 
     def image_close(self):
-        logger.info("image_close")
         for i in self.driver.window_handles:
             if len(self.driver.window_handles) > 1:
                 if self.driver.current_window_handle != self.original_window:
@@ -35,7 +30,6 @@ class BasePage:
         self.driver.switch_to.window(self.original_window)
 
     def do_click(self, by_locator):
-        logger.info("do_click")
         try:
             WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
         except exceptions.TimeoutException:
@@ -43,7 +37,6 @@ class BasePage:
             return False
 
     def do_enter(self, by_locator):
-        logger.info("do_enter")
         try:
             WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).send_keys(Keys.ENTER)
         except exceptions.TimeoutException:
@@ -51,7 +44,6 @@ class BasePage:
             return False
 
     def do_send_keys(self, by_locator, text):
-        logger.info("do_send_keys")
         try:
             WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).send_keys(text)
         except exceptions.TimeoutException:

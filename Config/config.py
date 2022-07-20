@@ -7,4 +7,3 @@ class TestData:
     IMAGE_HREF = "https://yandex.ru/images/?utm_source=main_stripe_big"
     IMAGE_TITLE = "Яндекс Картинки: поиск изображений в интернете, поиск по изображению"
 
-

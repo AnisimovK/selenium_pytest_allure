@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 
 
 class MainPage(BasePage):
-    """By locators"""
+    """ By locators """
     LOCATOR_SEARCH_FIELD = (By.ID, "text")
     LOCATOR_SEARCH_BUTTON = (By.CLASS_NAME, "search2__button")
     LOCATOR_POPUP_SUGGEST = (By.CSS_SELECTOR, 'ul.mini-suggest__popup-content')
