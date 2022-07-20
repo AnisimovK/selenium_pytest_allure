@@ -1,0 +1,6 @@
+**/.pytest_cache
+/.idea
+**/_pycache_
+/assets
+/venv
+
