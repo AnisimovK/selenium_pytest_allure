@@ -4,6 +4,7 @@ class TestData:
 
     BASE_URL = "https://yandex.ru/"
     SEARCH_NAME = "Тензор"
-    LOGIN_PAGE_TITLE = "a"
     IMAGE_HREF = "https://yandex.ru/images/?utm_source=main_stripe_big"
     IMAGE_TITLE = "Яндекс Картинки: поиск изображений в интернете, поиск по изображению"
+
+

@@ -49,7 +49,6 @@ class TestImage(BaseTest):
         self.ImagePage.image_closing_tabs()
         assert flag, 'Картинка не открылась'
 
-    # pytest Tests/test_Main_Page.py -v --html=./otchet.html
     @allure.story('Проверить, что картинка сменилась')
     @allure.severity('trivial')
     def test_step_forward(self):
