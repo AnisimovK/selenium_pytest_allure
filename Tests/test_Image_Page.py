@@ -18,6 +18,7 @@ class TestImage(BaseTest):
         self.ImagePage = ImagePage(self.driver)
         assert TestData.IMAGE_HREF == self.ImagePage.is_image_href_exists(), 'Ссылка "картинки" не присутствует на ' \
                                                                              'странице '
+
     @allure.story('Проверить, что перешли на url https://yandex.ru/images/')
     @allure.severity('trivial')
     def test_right_image_link(self):
